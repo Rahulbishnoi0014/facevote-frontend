@@ -8,8 +8,12 @@ body{
 .mainbody{
     background-color: rgb(54, 55, 55);
 }
+
+.textarea{
+    height: 50px;
+}
 .members{
-    
+    height: max-content;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -21,16 +25,84 @@ body{
 .img1,.img2{
     margin: 10px;
 
+    height: 400px;
+
 }
 
 img{
     height: 300px;
 }
 
-button{
-    font-size: 2rem;
-    background-color: white;
-    border: 0;
+.winner{
+    color: orange;
+    font-family:'Courier New', Courier, monospace;
+}
 
-    padding: 5px 20px;
+.winner img{
+    border: 10px solid orange;
+}
+
+
+button{
+   
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #1ED760;
+    height: 48px;
+    :hover{
+        transform: scale(1.04);
+        background-color: #21e065;
+    }
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #218243;
+    
+
+}
+
+button:active{
+    transform: scale(0.9);
+    background-color: #205a35;
+    
+}
+
+.worksphere h1{
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    color: orange;
+}
+
+.worksphere .title1 {
+    opacity: 1;
+    font-size: 2.5rem;
+}
+
+.worksphere .title2 {
+    opacity: 0.5;
+    font-size: 1.5rem;
+}
+
+.worksphere .title3 {
+    opacity: 0.2;
+    font-size: 1rem;
+
 }

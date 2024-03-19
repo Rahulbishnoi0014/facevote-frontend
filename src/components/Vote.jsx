@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./home.css";
 
-import pic from "./pic.jpg";
 export const Vote = () => {
 
   const [rollNo1, setRollNo1] = useState('');
   const [rollNo2, setRollNo2] = useState('');
 
-  const [deviceId, setdeviceId] = useState();
   const [voted, setVoted] = useState(false);
 
   const [voted1, setVoted1] = useState(false);
@@ -127,10 +126,23 @@ export const Vote = () => {
   return (
     <div>
 
-      <h1><code> V O T E </code></h1>
+      <div className="worksphere">
+        <h1 className="title3">F A C E V O T E</h1>
+        <h1 className="title2">F A C E V O T E</h1>
 
+        <h1 className="title1">F A C E V O T E</h1>
+
+        <h1 className="title2">F A C E V O T E</h1>
+        <h1 className="title3">F A C E V O T E</h1>
+
+      </div>
+      <br/>
+
+      <div className='textarea'>
       {voted && <p>you already voted!! <br></br>DON'T CHEAT BE HONEST !</p>}
       {voted1 && <p>S U C C E S S F U L L Y <br></br> V O T E D ! ! </p>}
+
+      </div>
 
       <div className='members'>
 
@@ -139,8 +151,9 @@ export const Vote = () => {
             e.target.src = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'; // Replace 'alternate_image.jpg' with the URL of your alternate image
             e.target.alt = 'Alternate Image';
           }} ></img>
-          <p>Member 1: {rollNo1}</p>
+          <p>contestant 1</p>
           {!voted && (<button onClick={() => handlevote(rollNo1)}>Vote</button>)}
+
 
 
         </div>
@@ -150,7 +163,7 @@ export const Vote = () => {
             e.target.alt = 'Alternate Image';
           }} ></img>
 
-          <p>Member 2: {rollNo2}</p>
+          <p>contestant 2</p>
           {!voted && (<button onClick={() => handlevote(rollNo2)}>Vote</button>)}
 
 
@@ -158,7 +171,7 @@ export const Vote = () => {
 
       </div>
 
-      <div>
+      <div className="winner">
         <h1> W I N N E R </h1>
         <h1>{winner ? <img src={winnerimg} alt='img'></img>
           : <p>No winner yet</p>}</h1>
