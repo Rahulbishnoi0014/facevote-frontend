@@ -20,7 +20,7 @@ export const Vote = () => {
 
   const getCurrentMembers = async () => {
     try {
-      const response = await axios.get('/getmembers');
+      const response = await axios.get('https://facevotebackend.onrender.com/getmembers');
       // setWinner("");
 
 
@@ -49,7 +49,7 @@ export const Vote = () => {
   };
 
   const getwinner = async () => {
-    const res = await axios.get('/winner');
+    const res = await axios.get('https://facevotebackend.onrender.com/winner');
 
     setWinner(res.data.winner);
     setwinnerimg(`https://glauniversity.in:8103/${res.data.winner}.jpg`);
@@ -58,7 +58,7 @@ export const Vote = () => {
 
   const gettoken = async () => {
     try {
-      const res = await axios.get("/token")
+      const res = await axios.get("https://facevotebackend.onrender.com/token")
 
       localStorage.setItem("deviceId", JSON.stringify(res.data.newtoken));
 
@@ -84,7 +84,7 @@ export const Vote = () => {
     }
 
     try {
-      const res = await axios.post('/vote', { votedRollNo, deviceId });
+      const res = await axios.post('https://facevotebackend.onrender.com/vote', { votedRollNo, deviceId });
 
       // console.log(res);
 
