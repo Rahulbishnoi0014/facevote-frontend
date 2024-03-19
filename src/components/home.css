@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    color: white;
+}
+.headline{
+    color: aqua;
+}
+.mainbody{
+    background-color: rgb(54, 55, 55);
+}
+.members{
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    padding: 50px;
+    
+}
+
+.img1,.img2{
+    margin: 10px;
+
+}
+
+img{
+    height: 300px;
+}
+
+button{
+    font-size: 2rem;
+    background-color: white;
+    border: 0;
+
+    padding: 5px 20px;
+}
